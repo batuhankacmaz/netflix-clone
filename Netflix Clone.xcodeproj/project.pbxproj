@@ -11,13 +11,15 @@
 		C5C7BB6429BD0316003D8933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB6329BD0316003D8933 /* SceneDelegate.swift */; };
 		C5C7BB6629BD0316003D8933 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB6529BD0316003D8933 /* MainTabBarVC.swift */; };
 		C5C7BB6B29BD0316003D8933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C7BB6A29BD0316003D8933 /* Assets.xcassets */; };
-		C5C7BB6E29BD0316003D8933 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C7BB6C29BD0316003D8933 /* LaunchScreen.storyboard */; };
 		C5C7BB7729BD0638003D8933 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB7629BD0638003D8933 /* HomeVC.swift */; };
 		C5C7BB7929BD0679003D8933 /* UpcomingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB7829BD0679003D8933 /* UpcomingVC.swift */; };
 		C5C7BB7B29BD069E003D8933 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB7A29BD069E003D8933 /* SearchVC.swift */; };
 		C5C7BB7D29BD06BC003D8933 /* DownloadsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB7C29BD06BC003D8933 /* DownloadsVC.swift */; };
 		C5C7BB8429BD10FB003D8933 /* CollectionViewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB8329BD10FB003D8933 /* CollectionViewTVC.swift */; };
 		C5C7BB8629BD1594003D8933 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB8529BD1594003D8933 /* HeroHeaderUIView.swift */; };
+		C5C7BB8829BDBC0B003D8933 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB8729BDBC0B003D8933 /* APICaller.swift */; };
+		C5C7BB8A29BDBFD6003D8933 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB8929BDBFD6003D8933 /* Movie.swift */; };
+		C5C7BB8C29BDC3A1003D8933 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB8B29BDC3A1003D8933 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +28,6 @@
 		C5C7BB6329BD0316003D8933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C5C7BB6529BD0316003D8933 /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		C5C7BB6A29BD0316003D8933 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C5C7BB6D29BD0316003D8933 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5C7BB6F29BD0316003D8933 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5C7BB7629BD0638003D8933 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C5C7BB7829BD0679003D8933 /* UpcomingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingVC.swift; sourceTree = "<group>"; };
@@ -34,6 +35,9 @@
 		C5C7BB7C29BD06BC003D8933 /* DownloadsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsVC.swift; sourceTree = "<group>"; };
 		C5C7BB8329BD10FB003D8933 /* CollectionViewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTVC.swift; sourceTree = "<group>"; };
 		C5C7BB8529BD1594003D8933 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		C5C7BB8729BDBC0B003D8933 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		C5C7BB8929BDBFD6003D8933 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		C5C7BB8B29BDC3A1003D8933 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +80,6 @@
 				C5C7BB6329BD0316003D8933 /* SceneDelegate.swift */,
 				C5C7BB6529BD0316003D8933 /* MainTabBarVC.swift */,
 				C5C7BB6A29BD0316003D8933 /* Assets.xcassets */,
-				C5C7BB6C29BD0316003D8933 /* LaunchScreen.storyboard */,
 				C5C7BB6F29BD0316003D8933 /* Info.plist */,
 			);
 			path = "Netflix Clone";
@@ -112,6 +115,7 @@
 		C5C7BB8029BD1089003D8933 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C5C7BB8929BDBFD6003D8933 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -119,6 +123,7 @@
 		C5C7BB8129BD10B0003D8933 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C5C7BB8B29BDC3A1003D8933 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 		C5C7BB8229BD10B6003D8933 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C5C7BB8729BDBC0B003D8933 /* APICaller.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -156,7 +162,7 @@
 		C5C7BB5629BD0315003D8933 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
@@ -188,7 +194,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5C7BB6E29BD0316003D8933 /* LaunchScreen.storyboard in Resources */,
 				C5C7BB6B29BD0316003D8933 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,27 +208,19 @@
 				C5C7BB7B29BD069E003D8933 /* SearchVC.swift in Sources */,
 				C5C7BB6629BD0316003D8933 /* MainTabBarVC.swift in Sources */,
 				C5C7BB7729BD0638003D8933 /* HomeVC.swift in Sources */,
+				C5C7BB8829BDBC0B003D8933 /* APICaller.swift in Sources */,
 				C5C7BB8629BD1594003D8933 /* HeroHeaderUIView.swift in Sources */,
 				C5C7BB6229BD0316003D8933 /* AppDelegate.swift in Sources */,
 				C5C7BB7D29BD06BC003D8933 /* DownloadsVC.swift in Sources */,
+				C5C7BB8C29BDC3A1003D8933 /* Extensions.swift in Sources */,
 				C5C7BB7929BD0679003D8933 /* UpcomingVC.swift in Sources */,
 				C5C7BB8429BD10FB003D8933 /* CollectionViewTVC.swift in Sources */,
+				C5C7BB8A29BDBFD6003D8933 /* Movie.swift in Sources */,
 				C5C7BB6429BD0316003D8933 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C5C7BB6C29BD0316003D8933 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C5C7BB6D29BD0316003D8933 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C5C7BB7029BD0316003D8933 /* Debug */ = {
@@ -333,6 +330,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

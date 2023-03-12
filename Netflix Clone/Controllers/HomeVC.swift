@@ -9,14 +9,14 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    let sectionTitles: [String] = ["Trendıng Movıes", "Popular" , "Trendıng TV","Upcomıng Movıes", "Top Rated"]
+    let sectionTitles: [String] = ["Trendıng Movıes", "Trendıng TV", "Popular" , "Upcomıng Movıes", "Top Rated"]
     
     private let homeFeedTable: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
         table.register(CollectionViewTVC.self, forCellReuseIdentifier: CollectionViewTVC.identifier)
         return table
     } ()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -29,6 +29,8 @@ class HomeVC: UIViewController {
         
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 400))
         homeFeedTable.tableHeaderView = headerView
+        
+        getTrendingMovies()
     }
     
     private func configureNavbar() {
@@ -46,6 +48,18 @@ class HomeVC: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
+    }
+    
+    private func getTrendingMovies() {
+        APICaller.shared.getTrendingMovies { results in
+            
+            switch results {
+            case .success(let movies):
+                print(movies)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
