@@ -7,6 +7,15 @@
 
 import UIKit
 
+
+enum Sections: Int {
+    case TrendingMovies = 0
+    case TrendingTV = 1
+    case Popular = 2
+    case Upcoming = 3
+    case TopRated = 4
+}
+
 class HomeVC: UIViewController {
     
     let sectionTitles: [String] = ["Trendıng Movıes", "Trendıng TV", "Popular" , "Upcomıng Movıes", "Top Rated"]
@@ -30,7 +39,7 @@ class HomeVC: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 400))
         homeFeedTable.tableHeaderView = headerView
         
-        fetchData()
+       
     }
     
     private func configureNavbar() {
@@ -50,31 +59,6 @@ class HomeVC: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    private func fetchData() {
-//        APICaller.shared.getTrendingMovies { results in
-//
-//            switch results {
-//            case .success(let movies):
-//                print(movies)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-        
-//        APICaller.shared.getTrendingTVs { results in
-//            //
-//        }
-        
-//        APICaller.shared.getUpcomingMovies { results in
-//            //
-//        }
-//        APICaller.shared.getPopularMovies { _ in
-//            //
-//        }
-        APICaller.shared.getTopRatedMovies { results in
-            print(results)
-        }
-    }
     
     func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
         let size = image.size
@@ -121,6 +105,66 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
+        switch indexPath.section {
+        case Sections.TrendingMovies.rawValue:
+            
+            APICaller.shared.getTrendingMovies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        case Sections.TrendingTV.rawValue:
+            
+            APICaller.shared.getTrendingTVs { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        case Sections.Popular.rawValue:
+            
+            APICaller.shared.getPopularMovies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        case Sections.Upcoming.rawValue:
+            
+            APICaller.shared.getUpcomingMovies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        case Sections.TopRated.rawValue:
+            
+            APICaller.shared.getTopRatedMovies { result in
+                switch result {
+                case .success(let titles):
+                    cell.configure(with: titles)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            }
+            
+        default:
+            return UITableViewCell()
+        }
+        
         return cell
     }
     
@@ -153,8 +197,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension StringProtocol {
-    var firstUppercased: String { lowercased().capitalized }
-}
+
 
 
