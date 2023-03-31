@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C513153729D7343300F0DF88 /* TitleTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513153629D7343300F0DF88 /* TitleTVCell.swift */; };
+		C513153929D7383500F0DF88 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C513153829D7383500F0DF88 /* TitleViewModel.swift */; };
 		C5C7BB6229BD0316003D8933 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB6129BD0316003D8933 /* AppDelegate.swift */; };
 		C5C7BB6429BD0316003D8933 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB6329BD0316003D8933 /* SceneDelegate.swift */; };
 		C5C7BB6629BD0316003D8933 /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C7BB6529BD0316003D8933 /* MainTabBarVC.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C513153629D7343300F0DF88 /* TitleTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTVCell.swift; sourceTree = "<group>"; };
+		C513153829D7383500F0DF88 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		C5C7BB5E29BD0316003D8933 /* Netflix Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C7BB6129BD0316003D8933 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5C7BB6329BD0316003D8933 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				C5C7BB8329BD10FB003D8933 /* CollectionViewTVC.swift */,
 				C5C7BB8529BD1594003D8933 /* HeroHeaderUIView.swift */,
 				C5C7BB9E29BECCD0003D8933 /* TitleCVCell.swift */,
+				C513153629D7343300F0DF88 /* TitleTVCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 		C5C7BB7F29BD1080003D8933 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C513153829D7383500F0DF88 /* TitleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -225,6 +231,7 @@
 				C5C7BB8829BDBC0B003D8933 /* APICaller.swift in Sources */,
 				C5C7BB8629BD1594003D8933 /* HeroHeaderUIView.swift in Sources */,
 				C5C7BB6229BD0316003D8933 /* AppDelegate.swift in Sources */,
+				C513153729D7343300F0DF88 /* TitleTVCell.swift in Sources */,
 				C5C7BB9F29BECCD0003D8933 /* TitleCVCell.swift in Sources */,
 				C5C7BB7D29BD06BC003D8933 /* DownloadsVC.swift in Sources */,
 				C5C7BB8C29BDC3A1003D8933 /* Extensions.swift in Sources */,
@@ -232,6 +239,7 @@
 				C5C7BB8429BD10FB003D8933 /* CollectionViewTVC.swift in Sources */,
 				C5C7BB8A29BDBFD6003D8933 /* Title.swift in Sources */,
 				C5C7BB6429BD0316003D8933 /* SceneDelegate.swift in Sources */,
+				C513153929D7383500F0DF88 /* TitleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
