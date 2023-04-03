@@ -151,7 +151,7 @@ class APICaller {
     
     //https://youtube.googleapis.com/youtube/v3/search?q=Harry%20Potter&key=[YOUR_API_KEY]
     
-    func getMovie(with query: String) {
+    func getMovie(with query: String, completion: @escaping (Result<VideoElement, Error>) -> Void) {
         
         guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
         
@@ -161,10 +161,10 @@ class APICaller {
             guard let data = data, error == nil else { return }
             
             do {
-                let results = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-                print(results)
+                let results = try JSONDecoder().decode(YoutubeSearchResponse.self, from: data)
+                completion(.success(results.items[0]))
             } catch {
-                print(error.localizedDescription)
+                completion(.failure(error))
             }
         }
         task.resume()
